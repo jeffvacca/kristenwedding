@@ -41,4 +41,4 @@ jobs:
           username: ${{ secrets.username }}  
           password: ${{ secrets.ftp_password }}  
           local-dir: my-app/dist/
-          server-dir: domains/jeffvacca.com/html/kristenwedding/
+          server-dir: /home/218947/domains/jeffvacca.com/html/kristenwedding/
