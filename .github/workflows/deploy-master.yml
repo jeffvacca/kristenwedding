@@ -13,7 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@master
-      
+    
+      - name: Use Node.js 14
+        uses: actions/setup-node@master
+        with:
+          node-version: '14'
+        
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+
       - name: Installing project dependencies
         run: npm install
 
