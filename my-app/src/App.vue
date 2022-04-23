@@ -41,6 +41,7 @@
       v-model="drawer"
       absolute
       temporary
+      color="rgb(255, 255, 255, 0.85)"
     >
       <v-list-item>
         <v-list-item-content>
