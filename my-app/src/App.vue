@@ -56,8 +56,15 @@
       <v-divider />
     </v-navigation-drawer>
 
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer" />
+    <v-app-bar
+      flat
+      fixed
+      color="transparent"
+    >
+      <v-app-bar-nav-icon
+        color="white"
+        @click="drawer = !drawer"
+      />
     </v-app-bar>
 
     <v-main>
