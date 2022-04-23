@@ -37,6 +37,29 @@
       </v-btn>
     </v-app-bar> -->
 
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider />
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+    </v-app-bar>
+
     <v-main>
       <router-view />
     </v-main>
@@ -49,8 +72,9 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    drawer: false
   })
+
 }
 </script>
 <style lang="ssss">
