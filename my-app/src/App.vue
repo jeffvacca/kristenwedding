@@ -10,6 +10,8 @@
         :color="burgerColor"
         @click="drawer = !drawer"
       />
+      <v-spacer />
+      <logo-horiz />
     </v-app-bar>
 
     <v-navigation-drawer
@@ -23,7 +25,7 @@
       <v-divider />
     </v-navigation-drawer>
 
-    <v-main>
+    <v-main style="background-color:#f0f0f0">
       <router-view />
     </v-main>
   </v-app>
@@ -31,10 +33,11 @@
 
 <script>
 import NavList from '@/components/NavList.vue'
+import LogoHoriz from './components/LogoHoriz.vue'
 
 export default {
   name: 'App',
-  components: { NavList },
+  components: { NavList, LogoHoriz },
 
   data: () => ({
     drawer: false
