@@ -1,5 +1,10 @@
 <template>
   <v-container>
+    <div>
+      <h1 class="font-5 text-center">
+        A Tale <br>As Old <br>As Time
+      </h1>
+    </div>
     <div class="about">
       <h1 class="primary--text">
         PRIMARY  - This is an about page
@@ -39,3 +44,10 @@ export default {
   name: 'About'
 }
 </script>
+
+<style lang="scss" scoped>
+h1{
+    font-size:7rem;
+    letter-spacing:1.5rem;
+}
+</style>

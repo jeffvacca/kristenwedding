@@ -1,41 +1,16 @@
 <template>
   <v-app>
-    <!-- <v-app-bar
-      app
-      color="primary"
-      dark
+    <v-app-bar
+      :app="!isHomePage"
+      flat
+      absolute
+      :color="topBarColor"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer />
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar> -->
+      <v-app-bar-nav-icon
+        :color="burgerColor"
+        @click="drawer = !drawer"
+      />
+    </v-app-bar>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -43,30 +18,10 @@
       temporary
       color="rgb(255, 255, 255, 0.85)"
     >
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Application
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+      <nav-list />
 
       <v-divider />
     </v-navigation-drawer>
-
-    <v-app-bar
-      flat
-      fixed
-      color="transparent"
-    >
-      <v-app-bar-nav-icon
-        color="white"
-        @click="drawer = !drawer"
-      />
-    </v-app-bar>
 
     <v-main>
       <router-view />
@@ -75,18 +30,41 @@
 </template>
 
 <script>
+import NavList from '@/components/NavList.vue'
 
 export default {
   name: 'App',
+  components: { NavList },
 
   data: () => ({
     drawer: false
-  })
+  }),
+  computed: {
+    isHomePage () {
+      return this.$route.name === 'Home'
+    },
+    topBarColor () {
+      if (this.$route.name === 'Home') {
+        return 'transparent'
+      } else {
+        return ''
+      }
+    },
+    burgerColor () {
+      if (this.$route.name === 'Home') {
+        return 'white'
+      } else {
+        return ''
+      }
+    }
+  },
+  created () {
+    console.log(this.$route)
+  }
 
 }
 </script>
-<style lang="ssss">
-
-/* @import "@/scss/style.scss"; */
+<style lang="scss">
+@import "scss/style.scss";
 
 </style>

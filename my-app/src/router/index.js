@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Splash from '../views/Splash.vue'
 import About from '../views/About.vue'
+import Location from '../views/Location.vue'
+import Events from '../views/Events.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Splash
+  },
+  {
+    path: '/location',
+    name: 'Location',
+    component: Location
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: Events
   },
   {
     path: '/about',
