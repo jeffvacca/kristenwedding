@@ -1,7 +1,7 @@
 /* eslint-disable vue/no-v-html */
 <template>
   <v-container>
-    <h1 class="display-3 text-center my-16">
+    <h1 class="display-3 text-center my-16 secondary--text">
       Events
     </h1>
     <v-timeline>

@@ -1,6 +1,9 @@
 <template>
   <v-container>
     <div>
+      <logo-horiz />
+
+      <logo-vert />
       <h1 class="font-5 text-center">
         A Tale <br>As Old <br>As Time
       </h1>
@@ -40,8 +43,11 @@
   </v-container>
 </template>
 <script>
+import LogoVert from '../components/LogoVert.vue'
+import LogoHoriz from '../components/LogoHoriz.vue'
 export default {
-  name: 'About'
+  name: 'About',
+  components: { LogoVert, LogoHoriz }
 }
 </script>
 
