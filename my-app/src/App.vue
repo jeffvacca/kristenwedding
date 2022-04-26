@@ -1,60 +1,99 @@
 <template>
   <v-app>
-    <!-- <v-app-bar
-      app
-      color="primary"
-      dark
+    <v-app-bar
+      :app="!isHomePage"
+      flat
+      absolute
+      :color="topBarColor"
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+      <v-app-bar-nav-icon
+        :color="burgerColor"
+        @click="drawer = !drawer"
+      />
       <v-spacer />
+      <logo-horiz v-if="!isHomePage" />
+    </v-app-bar>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar> -->
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      color="rgb(255, 255, 255, 0.85)"
+    >
+      <nav-list />
 
-    <v-main>
+      <v-divider />
+    </v-navigation-drawer>
+
+    <v-main style="background-color:#f0f0f0">
       <router-view />
     </v-main>
+    <v-footer
+      v-if="!isHomePage"
+      :style="{ backgroundImage: gradientString }"
+      class="main-footer py-5"
+    >
+      <h6
+        class="font-5 tale"
+      >
+        a Tale as old as Time
+      </h6>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
+import NavList from '@/components/NavList.vue'
+import LogoHoriz from './components/LogoHoriz.vue'
 
 export default {
   name: 'App',
+  components: { NavList, LogoHoriz },
 
   data: () => ({
-    //
-  })
+    drawer: false
+  }),
+  computed: {
+    isHomePage () {
+      return this.$route.name === 'Home'
+    },
+    topBarColor () {
+      if (this.$route.name === 'Home') {
+        return 'transparent'
+      } else {
+        return ''
+      }
+    },
+    burgerColor () {
+      if (this.$route.name === 'Home') {
+        return 'white'
+      } else {
+        return ''
+      }
+    },
+    gradientString () {
+      return `linear-gradient(to right, ${this.$vuetify.theme.themes.light.secondary}, ${this.$vuetify.theme.themes.light.primary})`
+    }
+  },
+  created () {
+    console.log(this.$route)
+  }
+
 }
 </script>
-<style lang="ssss">
+<style lang="scss" scoped>
+@import "scss/style.scss";
+.main-footer{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.tale{
+    font-size: 1.5rem;
+    letter-spacing:.4rem;
+    text-align:right;
 
-/* @import "@/scss/style.scss"; */
+    color:rgba(255,255,255,0.4)
+}
 
 </style>

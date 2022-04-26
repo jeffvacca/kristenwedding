@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="home mt--64px">
     <div id="splash-bg">
       <div id="splash-overlay" />
     </div>
+
     <div id="splash-main">
       <v-container
         class="fill-height"
@@ -18,17 +19,17 @@
                 SAVE THE DATE
               </h2>
               <div class="center-text-container">
-                <h1 class="font-4 names">
+                <h1 class="font-2 names">
                   KRISTEN
                 </h1>
-                <h1 class="font-11 ampersand">
+                <h1 class="font-4 ampersand">
                   &amp;
                 </h1>
-                <h1 class="font-4 names">
+                <h1 class="font-2 names">
                   DAMIAN
                 </h1>
               </div>
-              <h3 class="font-7 date">
+              <h3 class="font-3 date">
                 10 | 1 | 22
               </h3>
             </div>
@@ -44,7 +45,11 @@
 // import Splash from '@/components/Splash.vue'
 
 export default {
-  name: 'Splash'
+  name: 'Splash',
+
+  data: () => ({
+    drawer: false
+  })
 }
 </script>
 
@@ -89,7 +94,7 @@ export default {
         color:#fff;
         font-size:5rem;
     }
-    .font-4{
+    .font-2{
         letter-spacing:10px;
     }
 
