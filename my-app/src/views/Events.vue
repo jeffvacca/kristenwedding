@@ -56,9 +56,9 @@ export default {
     },
     classList (i, event) {
       if (i % 2 !== 0) { // odd
-        return `headline font-weight-light mb-4 ${event.color}--text text-right`
+        return `font-1 event-name mb-4 ${event.color}--text text-right`
       } else {
-        return `headline font-weight-light mb-4 ${event.color}--text`
+        return `font-1 event-name mb-4 ${event.color}--text`
       }
     }
   }
@@ -66,8 +66,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/style.scss";
 h1{
     font-size:7rem;
     letter-spacing:1.5rem;
+}
+.event-name{
+    font-weight:bold;
+    letter-spacing:.6rem;
+    font-size:1.9rem;
+    &.text-right{
+        margin-right: -0.6rem;
+    }
+    @include respond-below(sm){
+        font-size:1.3rem;
+        letter-spacing:.1rem;
+    }
 }
 </style>
