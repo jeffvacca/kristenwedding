@@ -39,8 +39,14 @@ export default {
       {
         color: 'accent',
         event: 'Ceremony',
-        time: '5:15',
+        time: '4:30',
         desc: 'The ceremony will be held at:<br> Anne Kolb Nature Center,<br> 751 Sheridan St. Hollywood FL, 33019'
+      },
+      {
+        color: 'success',
+        event: 'Cocktail Hour',
+        time: '5:00',
+        desc: ''
       },
       {
         color: 'warning',
