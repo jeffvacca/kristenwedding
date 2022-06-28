@@ -5,6 +5,7 @@
         v-for="(item, i) in items"
         :key="i"
         :to="item.link"
+        :href="item.link"
       >
         <v-list-item-icon>
           <v-icon
@@ -43,6 +44,11 @@ export default {
         icon: 'mdi-bed',
         text: 'Accommodations',
         link: 'Accommodations'
+      },
+      {
+        icon: 'mdi-bed',
+        text: 'RSVP',
+        link: 'RSVP'
       }
     ],
     model: 0

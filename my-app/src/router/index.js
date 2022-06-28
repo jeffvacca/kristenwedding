@@ -30,6 +30,11 @@ const routes = [
     component: Accommodations
   },
   {
+    path: '/rsvp',
+    name: 'RSVP',
+    beforeEnter () { window.open('https://docs.google.com/forms/d/e/1FAIpQLSd4RRfP71Twi17DQVgL_3ewpf7lM2z-a3mWXf3g-4cZA1dSgw/viewform', '_blank') }
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
