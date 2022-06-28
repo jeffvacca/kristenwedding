@@ -4,6 +4,7 @@ import Splash from '../views/Splash.vue'
 import About from '../views/About.vue'
 import Location from '../views/Location.vue'
 import Events from '../views/Events.vue'
+import Accommodations from '../views/Accommodations.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/events',
     name: 'Events',
     component: Events
+  },
+  {
+    path: '/accommodations',
+    name: 'Accommodations',
+    component: Accommodations
   },
   {
     path: '/about',
