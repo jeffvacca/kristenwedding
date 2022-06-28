@@ -38,6 +38,11 @@ export default {
         icon: 'mdi-calendar-clock',
         text: 'Events',
         link: 'Events'
+      },
+      {
+        icon: 'mdi-bed',
+        text: 'Accommodations',
+        link: 'Accommodations'
       }
     ],
     model: 0
