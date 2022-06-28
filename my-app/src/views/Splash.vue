@@ -16,7 +16,10 @@
             font-1
             save"
               >
-                SAVE THE DATE
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd4RRfP71Twi17DQVgL_3ewpf7lM2z-a3mWXf3g-4cZA1dSgw/viewform"
+                  target="_blank"
+                >RSVP</a>
               </h2>
               <div class="center-text-container">
                 <h1 class="font-2 names">
@@ -89,6 +92,12 @@ export default {
     h2{
         color:#fff;
         font-size:5rem;
+        a{
+            text-decoration: none;
+            &:hover{
+                color:var(--v-info-lighten2);
+            }
+        }
     }
     h3{
         color:#fff;
@@ -99,12 +108,12 @@ export default {
     }
 
     .save{
-        font-size:2.5rem;
-        letter-spacing: .8rem;
+        font-size:3rem;
+        letter-spacing: 1.3rem;
         color:#fff;
         @include respond-below(sm){
-            font-size:2.1rem;
-            letter-spacing: .2rem;
+            //font-size:2.1rem;
+            //letter-spacing: .2rem;
         }
     }
 
