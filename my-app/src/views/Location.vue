@@ -25,7 +25,12 @@
             class="secondary--text"
           >
             <h2 class="font-3 secondary--text">
-              Anne Kolb Nature Center
+              <a
+                href="https://www.broward.org/Parks/Pages/Park.aspx?=1"
+                target="_blank"
+              >
+                Anne Kolb Nature Center
+              </a>
             </h2>
             <v-divider />
             <p class="body-2 secondary--text py-4">
@@ -85,5 +90,15 @@ h1{
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+}
+h2 {
+    a{
+        color: var(--v-secondary-base);
+        text-decoration: none;
+
+    }
+    &:hover a{
+        color: var(--v-info-base);
+    }
 }
 </style>
