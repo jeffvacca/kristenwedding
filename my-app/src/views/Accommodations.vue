@@ -15,54 +15,6 @@
             <v-img
               class="white--text align-end"
               height="200px"
-              src="../assets/hotel-sheldon.jpg"
-            >
-              <v-card-title>Hotel Sheldon</v-card-title>
-            </v-img>
-
-            <v-card-text class="text--primary">
-              <div>1000 N. Surf Road</div>
-              <div>Hollywood, FL 33019</div>
-              <div>
-                954–922–6020
-              </div>
-            </v-card-text>
-
-            <v-card-actions>
-              <v-btn
-                color="info"
-                href="tel:9549226020"
-                icon
-              >
-                <v-icon>mdi-phone</v-icon>
-              </v-btn>
-              <v-btn
-                color="info lighten-1"
-                href="https://hotelsheldon.com/"
-                target="_blank"
-                icon
-              >
-                <v-icon>mdi-web</v-icon>
-              </v-btn>
-              <v-btn
-                color="info lighten-2"
-                href="https://www.google.com/maps/place/Hotel+Sheldon/@26.0180746,-80.1176592,17z/data=!3m1!4b1!4m8!3m7!1s0x88d9ab3c635379c9:0x866705b52113aa4b!5m2!4m1!1i2!8m2!3d26.0180698!4d-80.1154652"
-                target="_blank"
-                icon
-              >
-                <v-icon>mdi-map</v-icon>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card
-            class="mx-auto"
-            max-width="400"
-          >
-            <v-img
-              class="white--text align-end"
-              height="200px"
               src="../assets/margaritaville.jpg"
             >
               <v-card-title>Margaritaville</v-card-title>
